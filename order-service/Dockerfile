@@ -12,4 +12,4 @@ WORKDIR /order-service
 
 RUN npm install
 
-CMD [ "npm", "start" ]
+ENTRYPOINT node index.js

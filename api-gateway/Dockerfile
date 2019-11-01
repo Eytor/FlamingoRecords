@@ -9,8 +9,9 @@ ENV ASPNETCORE_ENVIRONMENT=Production
 
 ADD . /app
 
-WORKDIR /app/customer-service
+WORKDIR /app
 
 RUN dotnet restore
+
 
 ENTRYPOINT dotnet run
