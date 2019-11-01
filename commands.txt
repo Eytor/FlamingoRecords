@@ -8,9 +8,11 @@ docker run -d -p 7000:7000 --network=flamingo-network --name api-gateway -t eyth
 # customer-service
 docker build --tag eythoratli/customer-service --file customer-service/Dockerfile .
 
+docker run -d --network=flamingo-network --name customer-service -t eythoratli/customer-service
+
 # order service
 docker build --tag eythoratli/order-service --file order-service/Dockerfile .
-docker run -d -p 80:4000 --network=flamingo-network --name order-service eythoratli/order-service
+docker run -d --network=flamingo-network --name order-service eythoratli/order-service
 
 # order database
 ???

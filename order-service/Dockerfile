@@ -4,7 +4,7 @@ LABEL author="Mikael"
 
 ENV NODE_ENV production
 
-ENV PORT 4000
+ENV PORT 80
 
 ADD ./order-service/ /app/order-service/
 
