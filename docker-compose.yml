@@ -42,6 +42,16 @@ services:
     container_name: order-db
     networks:
       - "flamingo-network"
+  message-broker:
+    image: rabbitmq:3
+    container_name: message-broker
+    hostname: message-broker
+    networks:
+      - "flamingo-network"
+    environment:
+      - RABBITMQ_DEFAULT_VHOST=/
+      - RABBITMQ_DEFAULT_PASS=pass
+      - RABBITMQ_DEFAULT_USER=user
 networks:
   flamingo-network:
     driver: bridge
