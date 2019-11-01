@@ -5,6 +5,7 @@ LABEL "author"="Eyþór"
 USER root
 
 ENV ASPNETCORE_URLS=http://+:7000
+ENV ASPNETCORE_ENVIRONMENT=Production
 
 ADD ./api-gateway/ /app
 
@@ -12,4 +13,4 @@ WORKDIR /app
 
 RUN dotnet restore
 
-ENTRYPOINT [ "dotnet", "publish" ]
+ENTRYPOINT dotnet run
