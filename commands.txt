@@ -2,30 +2,33 @@
 docker network create flamingo-network
 
 # api-gateway
-docker build --tag eythoratli/api-gateway --file api-gateway/Dockerfile .
+docker build --tag eythoratli/api-gateway --file api-gateway/Dockerfile api-gateway/.
 
 docker run -d -p 7000:7000 --network=flamingo-network --name api-gateway -t eythoratli/api-gateway
 
 # customer-service
-docker build --tag eythoratli/customer-service --file customer-service/Dockerfile .
+docker build --tag eythoratli/customer-service --file customer-service/Dockerfile customer-service/.
 
 docker run -d --network=flamingo-network --name customer-service -t eythoratli/customer-service
 
 docker run --network=flamingo-network --name customer-db -e POSTGRES_PASSWORD=Abc.12345 -e POSTGRES_DB=customer_db -v /customer-db/db-scripts/init.sql:/docker-entrypoint-initdb.d/init.sql -d postgres
 
 # order service
-docker build --tag eythoratli/order-service --file order-service/Dockerfile .
+docker build --tag eythoratli/order-service --file order-service/Dockerfile order-service/.
+
 docker run -d --network=flamingo-network --name order-service eythoratli/order-service
 
 # order database
 docker run -d order-db --network pokemon-network mongo
 
 # log-service
-docker build -t eythoratli/log-service --file log-service/Dockerfile .
+docker build -t eythoratli/log-service --file log-service/Dockerfile log-service/.
+
 docker run -dit --rm --network=flamingo-network --name log-service eythoratli/log-service
 
 # email service
-docker build -t eythoratli/email-service --file email-service/Dockerfile .
+docker build -t eythoratli/email-service --file email-service/Dockerfile email-service/.
+
 docker run -dit --rm --network=flamingo-network --name email-service eythoratli/email-service
 
 # message broker
