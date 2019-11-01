@@ -1,1 +1,6 @@
 docker network create flamingo-network
+
+# api-gateway
+docker build --tag eythoratli/api-gateway --file Dockerfile .
+
+docker run -d -p 7000:7000 --network=flamingo-network --name api-gateway -t eythoratli/api-gateway
