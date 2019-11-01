@@ -13,17 +13,3 @@ WORKDIR /app
 RUN dotnet restore
 
 ENTRYPOINT [ "dotnet", "run" ]
-
-FROM postgres
-
-USER postgres
-
-ENV POSTGRES_PASSWORD=Abc.12345
-ENV POSTGRES_DB=customer_db
-
-ADD ./customer-db/ /db
-
-WORKDIR /db
-
-CMD [ "./db-scripts/init.sql" ]
-
