@@ -4,9 +4,9 @@ LABEL author="Mikael"
 
 ENV PYTHON_ENV production
 
-ADD ./email-service/ /app/email-service/
+ADD . /email-service
 
-WORKDIR /email-service/
+WORKDIR /email-service
 
 RUN pip install --no-cache-dir -r requirements.txt
 
