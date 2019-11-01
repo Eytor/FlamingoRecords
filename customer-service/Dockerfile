@@ -7,9 +7,9 @@ USER root
 ENV ASPNETCORE_URLS=http://+:80
 ENV ASPNETCORE_ENVIRONMENT=Production
 
-ADD ./customer-service/ /app
+ADD . /customer-service
 
-WORKDIR /app
+WORKDIR /customer-service
 
 RUN dotnet restore
 

@@ -4,9 +4,9 @@ LABEL author="Mikael"
 
 ENV PYTHON_ENV production
 
-ADD ./log-service/ /app/log-service/
+ADD . /log-service
 
-WORKDIR /log-service/
+WORKDIR /log-service
 
 RUN pip install --no-cache-dir -r requirements.txt
 

@@ -6,9 +6,9 @@ ENV NODE_ENV production
 
 ENV PORT 80
 
-ADD ./order-service/ /app/order-service/
+ADD . /order-service
 
-WORKDIR /order-service/
+WORKDIR /order-service
 
 RUN npm install
 
