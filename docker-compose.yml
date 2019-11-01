@@ -30,6 +30,9 @@ services:
   customer-db:
     image: postgres
     container_name: customer-db
+    environment:
+      - POSTGRES_PASSWORD: Abc.12345
+      - POSTGRES_DB: customer_db
     networks:
       - "flamingo-network"
     volumes:
