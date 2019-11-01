@@ -60,3 +60,7 @@ typings/
 
 # next.js build output
 .next
+customer-service/customer-service/obj/Debug/netcoreapp2.2/customer-service.csproj.CoreCompileInputs.cache
+customer-service/customer-service.data/obj/Debug/netstandard2.0/customer-service.data.csproj.CoreCompileInputs.cache
+customer-service/customer-service.models/obj/Debug/netstandard2.0/customer-service.models.csproj.CoreCompileInputs.cache
+customer-service/customer-service.services/obj/Debug/netstandard2.0/customer-service.services.csproj.CoreCompileInputs.cache
