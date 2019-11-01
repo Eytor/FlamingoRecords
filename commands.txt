@@ -6,8 +6,16 @@ docker build --tag eythoratli/api-gateway --file Dockerfile .
 docker run -d -p 7000:7000 --network=flamingo-network --name api-gateway -t eythoratli/api-gateway
 
 # order service
-docker build --tag eythoratli/order-service --file Dockerfile .
-docker run -d -p 80:4000 --network=flamingo-network --name order-service -t eythoratli/order-service
+docker build --tag eythoratli/order-service --file order-service/Dockerfile .
+docker run -d -p 80:4000 --network=flamingo-network --name order-service eythoratli/order-service
 
 # order database
 ???
+
+# log-service
+docker build -t eythoratli/log-service --file log-service/Dockerfile .
+docker run -dit --rm --network=flamingo-network --name log-service eythoratli/log-service
+
+# email service
+docker build -t eythoratli/email-service --file email-service/Dockerfile .
+docker run -dit --rm --network=flamingo-network --name email-service eythoratli/email-service
