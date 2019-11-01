@@ -12,4 +12,4 @@ WORKDIR /app
 
 RUN dotnet restore
 
-ENTRYPOINT [ "dotnet", "run" ]
+ENTRYPOINT [ "dotnet", "publish" ]
