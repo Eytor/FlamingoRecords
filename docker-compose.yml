@@ -32,6 +32,11 @@ services:
     container_name: customer-db
     networks:
       - "flamingo-network"
+    volumes:
+      - ./customer-db/db-scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_PASSWORD=Abc.12345
+      - POSTGRES_DB=customer_db
   order-db:
     image: mongo
     container_name: order-db
