@@ -60,7 +60,15 @@ typings/
 
 # next.js build output
 .next
+customer-service/customer-service/obj/Debug/netcoreapp2.2/customer-service.AssemblyInfo.cs
+customer-service/customer-service/obj/Debug/netcoreapp2.2/customer-service.AssemblyInfoInputs.cache
 customer-service/customer-service/obj/Debug/netcoreapp2.2/customer-service.csproj.CoreCompileInputs.cache
+customer-service/customer-service.data/obj/Debug/netstandard2.0/customer-service.data.AssemblyInfo.cs
+customer-service/customer-service.data/obj/Debug/netstandard2.0/customer-service.data.AssemblyInfoInputs.cache
 customer-service/customer-service.data/obj/Debug/netstandard2.0/customer-service.data.csproj.CoreCompileInputs.cache
+customer-service/customer-service.models/obj/Debug/netstandard2.0/customer-service.models.AssemblyInfo.cs
+customer-service/customer-service.models/obj/Debug/netstandard2.0/customer-service.models.AssemblyInfoInputs.cache
 customer-service/customer-service.models/obj/Debug/netstandard2.0/customer-service.models.csproj.CoreCompileInputs.cache
+customer-service/customer-service.services/obj/Debug/netstandard2.0/customer-service.services.AssemblyInfo.cs
+customer-service/customer-service.services/obj/Debug/netstandard2.0/customer-service.services.AssemblyInfoInputs.cache
 customer-service/customer-service.services/obj/Debug/netstandard2.0/customer-service.services.csproj.CoreCompileInputs.cache

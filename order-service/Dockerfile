@@ -6,7 +6,7 @@ ENV NODE_ENV production
 
 ENV PORT 4000
 
-ADD . /order-service/
+ADD ./order-service/ /app/order-service/
 
 WORKDIR /order-service/
 

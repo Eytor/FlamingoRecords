@@ -4,7 +4,7 @@ LABEL author="Mikael"
 
 ENV PYTHON_ENV production
 
-ADD . /log-service/
+ADD ./log-service/ /app/log-service/
 
 WORKDIR /log-service/
 

@@ -4,7 +4,7 @@ LABEL author="Mikael"
 
 ENV PYTHON_ENV production
 
-ADD . /email-service/
+ADD ./email-service/ /app/email-service/
 
 WORKDIR /email-service/
 
