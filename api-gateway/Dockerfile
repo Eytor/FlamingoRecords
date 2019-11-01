@@ -6,7 +6,7 @@ USER root
 
 ENV ASPNETCORE_URLS=http://+:7000
 
-ADD . /app
+ADD ./api-gateway/ /app
 
 WORKDIR /app
 
