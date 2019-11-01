@@ -15,7 +15,7 @@ docker build --tag eythoratli/order-service --file order-service/Dockerfile .
 docker run -d --network=flamingo-network --name order-service eythoratli/order-service
 
 # order database
-???
+docker run -d order-db --network pokemon-network mongo
 
 # log-service
 docker build -t eythoratli/log-service --file log-service/Dockerfile .
