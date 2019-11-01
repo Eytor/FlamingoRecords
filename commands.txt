@@ -1,3 +1,4 @@
+# network
 docker network create flamingo-network
 
 # api-gateway
@@ -26,3 +27,6 @@ docker run -dit --rm --network=flamingo-network --name log-service eythoratli/lo
 # email service
 docker build -t eythoratli/email-service --file email-service/Dockerfile .
 docker run -dit --rm --network=flamingo-network --name email-service eythoratli/email-service
+
+# message broker
+docker run -d --network=flamingo-network --hostname message-broker --name message-broker -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=pass -e RABBITMQ_DEFAULT_VHOST=/  rabbitmq:3
